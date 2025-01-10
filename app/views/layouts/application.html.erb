@@ -45,14 +45,13 @@
                               </a>
                           </div>
 
-                          <ul class="header-nav__menu hideOnTablet">
+                          <ul class="header-nav__menu hideOnMobile">
                               <li class="nav__menu-item">
                                   <%= link_to "Trang chủ", root_path, class: "menu-item__link " %>                             
 
                               </li>                             
                             
-                              <li class="nav__menu-item nav__menu-item--login">
-                                
+                              <li class="nav__menu-item nav__menu-item--login">                                
                                       
                                         <% if !user_signed_in? %>
                                           <%= link_to "Đăng nhập", new_user_session_path , class: "menu-item__link menu-item__user" %>
@@ -65,9 +64,38 @@
                                     <i class="fa-solid fa-right-from-bracket icon"></i> Đăng xuất
                                   <% end %>                                          
                                 <% end %>
+                              </li>                                     
+                          </ul>
+
+                          
+
+                          <ul class="header-nav__menu hideOnTablet hideOnPC">
+                              <li class="nav__menu-item">
+                                  <%= link_to root_path, class: "menu-item__link " do %>  
+                                      <i class="fa-solid fa-house icon-log"></i> 
+                                      <span> Trang chủ </span>
+                                  <% end %>                       
+
+                              </li>                             
+                            
+                              <li class="nav__menu-item nav__menu-item--login">                                
+                                      
+                                        <% if !user_signed_in? %>
+                                          <%= link_to  new_user_session_path , class: "menu-item__link menu-item__user" do %>
+                                            <i class="fa-regular fa-circle-user icon-log"></i> 
+                                            <span> Đăng nhập </span>
+                                          <% end %>
+                                        <% end %>                                                                                                                                                         
                               </li>
 
-                                      
+                              <li class="nav__menu-item nav__menu-item--login">
+                                <% if user_signed_in? %>
+                                  <%= button_to destroy_user_session_path, method: :delete, class: "menu-item__link menu-item__user item" do %>
+                                    <i class="fa-solid fa-right-from-bracket icon icon-log"></i> 
+                                    <span>Đăng xuất</span>
+                                  <% end %>                                          
+                                <% end %>
+                              </li>                                     
                           </ul>
                               
                               

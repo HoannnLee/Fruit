@@ -348,9 +348,9 @@
 }
 
 .products-details__container--des{
-    height: auto !important;
+    height: auto;
     margin-top: 8px;
-    padding: 16px;
+    padding:20px 16px;
 }
 
 
@@ -378,7 +378,7 @@
 }
 
 .product-details__content{
-    display: flex;
+    
 }
 
 .product-details__content > div{
@@ -392,7 +392,8 @@
 }
 
 .products-details__info{
-    width: 60%;
+    height: 100%;
+    padding: 50px 0 0 50px;
     border-left: 1px solid var(--Primary-color);
 }
 

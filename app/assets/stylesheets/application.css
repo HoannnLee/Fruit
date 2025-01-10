@@ -27,14 +27,7 @@
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
   }
-  body {
-    transition: opacity 0.3s ease;
-  }
-  
-  body.fade-out {
-    opacity: 0;
-  }
-  
+
   
   .btnn{
     min-width: 124px;
@@ -51,8 +44,6 @@
     align-items: center;
     cursor: pointer;
   }
-  
-  
   
   .btn.btn--normal:hover{
     background-color: rgba(0 , 0 , 0 ,0.05);
@@ -180,137 +171,7 @@
   .select-ipnut__link:hover{
     color: var(--primay-color--);
   }
-  
-  .block-breakcump{
-    margin-top:100px;
-    background-color: var(--white-color--);
-    /* box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.2); */
-  }
-  .block-breakcump-container{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-  }
-  
-  
-  .breakcump-item__heading{
-    font-size:2.4rem;
-    color: var(--text-color--);
-    font-weight: 500;
-  }
-  
-  .breakcump-item__panigation{
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: var(--text-color--);
-  }
-  
-  @keyframes growth{
-    from{
-        transform: scale(var(--growth-form));
-    }
-    to{
-        transform: scale(var(--growth-to));
-    }
-  }
-  
-  /*Modal*/
-  .modal{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    animation: fadeIn linear 0.1s;
-    z-index: 2;
-  }
-  
-  .modal.show{
-    display: flex;
-  }
-  
-  .modal__overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(251, 214, 82, 0.2);
-  }
-  
-  .modal__body{
-    --growth-form:0.7;
-    --growth-to:1;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    animation: growth linear 0.1s;
-  }
-  
-  .modal__inner{
-    position: relative;
-  }
-  
-  .auth-form__controls{
-    margin-top: 60px;
-  }
-  
-  @keyframes fadeIn{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-  }
-  
-  @keyframes scale-up-center {
-    0% {
-      transform: scale(0.3);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0.8;
-    }
-  }
-  
-  @keyframes LabelUp{
-    from{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-  
-    to{
-        transform: translateX(0);
-        opacity: 1;
-    }
-  }
-  
-  
-  @keyframes LabelDown{
-    from{
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-  
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-  }
-  
-  @Keyframes blockUP{
-    from{
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-  }
-  
+
   .grid {
     width: 100%;
     display: block;
